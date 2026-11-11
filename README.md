@@ -13,7 +13,7 @@
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres%20%2B%20RLS-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
-[The problem](#the-problem) · [Our solution](#our-solution) · [Results](#results) · [Tech stack](#tech-stack) · [How it works](#how-it-works) · [Team](#team)
+[The problem](#the-problem) · [Our solution](#our-solution) · [Results](#results) · [Tech stack](#tech-stack) · [How it works](#how-it-works) · [Team](#cluck--cup-team)
 
 </div>
 
@@ -115,17 +115,17 @@ Either store can **report a problem** on an order, with text or a short voice cl
 2. **Orders:** every order with its status, and a detail view with the full step-by-step history.
 3. **Settings:** the menu and prices, the alert timers for late orders, and the tablets themselves, including PINs and remote logout.
 
-## Team
+## Cluck & Cup Team
 
 CSSWENG Group 1, De La Salle University, 2026.
 
 | Name | Role |
 | :--- | :--- |
-| Morgan, Jack Owen L. | Project Manager |
-| Hallare, Zach Benedict I. | Business Analyst |
+| Morgan, Jack Owen | Project Manager |
+| Hallare, Zach Benedict | Business Analyst |
 | Tan, Neil Justine | Business Analyst |
-| Campo, Enzo | Lead Developer |
-| Fortunato, Jayel James T. | Developer |
+| Campo, Benette Enzo | Lead Developer |
+| Fortunato, Jayel James | Developer |
 | Yee, Ivan Rae | Developer |
 | Cheung, Tsz Man | Quality Assurance |
-| Maglente, Michael Stephen F. | Quality Assurance |
+| Maglente, Michael Stephen | Quality Assurance |
