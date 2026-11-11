@@ -92,28 +92,122 @@ flowchart LR
 
 ## How it works
 
-### Cafe tablet
+The tablet screenshots follow one order, **#001**, through both stores on a local build running on two tablet emulators. It went from request to received in two minutes. The dashboard figures come from 60 days of generated demo orders.
 
-1. **Sign in.** The cashier picks the store and types its PIN. On the first run, a short setup turns on notifications, exempts the app from battery saving and plays a test alert.
-2. **Compose the order.** A menu composer replaces free typing. The cashier taps items, picks flavours and quantities, and reviews the order before sending it.
-3. **Wait for an answer.** The order shows as *Waiting for response* until the chicken store accepts, declines or lowers a quantity.
-4. **Record the payment.** Once accepted, the cashier records GCash or cash, which starts the cooking.
-5. **Follow it.** A timeline shows *Cooking*, *On the way* and finally *Received*, which the cashier marks when the chicken arrives.
+### First-run setup
 
-### Chicken tablet
+Each tablet is set up once: pick the store and type its PIN, allow notifications, keep the app awake, and play a test alert.
 
-1. **Get the alert.** A new order rings loudly and appears on the board as a *New request*.
-2. **Answer it.** Staff accept it, decline it with a reason, or lower a quantity when stock runs short.
-3. **Cook and send.** After the cafe records payment, the order turns into *Cook now*. Staff mark it *On the way* when it leaves.
-4. **Keep the menu current.** The availability screen switches items on or off when they sell out.
+<table>
+  <tr>
+    <td width="33%"><img src="docs/screenshots/01-setup-store.png" alt="Pick the store"></td>
+    <td width="33%"><img src="docs/screenshots/02-setup-pin.png" alt="Enter the store PIN"></td>
+    <td width="33%"><img src="docs/screenshots/03-setup-test-alert.png" alt="Test alert"></td>
+  </tr>
+</table>
 
-Either store can **report a problem** on an order, with text or a short voice clip, and the other store sees it at once.
+### One order, start to finish
+
+**1. The cafe composes the order.** A menu composer replaces free typing. The cashier taps an item, picks its flavours, and reviews the cart before sending it.
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/04-cafe-menu.png" alt="Cafe menu composer"></td>
+    <td width="50%"><img src="docs/screenshots/05-cafe-flavours.png" alt="Picking flavours"></td>
+  </tr>
+</table>
+
+<img src="docs/screenshots/06-cafe-cart.png" alt="Cart ready to send" width="100%">
+
+**2. The chicken store gets it at once.** The cafe sees *Waiting for response*. The chicken tablet rings and shows a *New request* under **Answer now**.
+
+<table>
+  <tr>
+    <th width="50%">Cafe</th>
+    <th width="50%">Chicken</th>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/07-cafe-waiting.png" alt="Cafe waiting for response"></td>
+    <td><img src="docs/screenshots/08-chicken-new-request.png" alt="Chicken new request"></td>
+  </tr>
+</table>
+
+**3. The chicken store answers.** Staff accept everything, decline with a reason, or lower a quantity when stock runs short.
+
+<img src="docs/screenshots/09-chicken-answer.png" alt="Chicken answer screen" width="100%">
+
+**4. The cafe takes payment.** The cafe gets an *accepted* alert with the total. The chicken side is told not to cook until payment is in.
+
+<table>
+  <tr>
+    <th width="50%">Cafe</th>
+    <th width="50%">Chicken</th>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/10-cafe-accepted-alert.png" alt="Cafe accepted alert"></td>
+    <td><img src="docs/screenshots/11-chicken-waiting-payment.png" alt="Chicken waiting for payment"></td>
+  </tr>
+</table>
+
+The cashier records GCash with its 13-digit reference, or cash. Nothing is charged here; the app only records how the customer paid.
+
+<img src="docs/screenshots/12-cafe-payment.png" alt="Recording a GCash payment" width="100%">
+
+**5. Cook, send, receive.** Payment turns the order into *Cook now* on the chicken tablet. Staff mark it on the way when the runner leaves, and the cafe marks it received when it arrives.
+
+<table>
+  <tr>
+    <th width="50%">Cafe</th>
+    <th width="50%">Chicken</th>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/14-cafe-cooking.png" alt="Cafe sees cooking"></td>
+    <td><img src="docs/screenshots/13-chicken-cook-now.png" alt="Chicken cook now"></td>
+  </tr>
+</table>
+
+On the cafe tablet, the runner leaving sends an *on the way* alert, and marking it received completes the timeline.
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/15-cafe-on-the-way.png" alt="Cafe on the way alert"></td>
+    <td width="50%"><img src="docs/screenshots/16-cafe-received.png" alt="Order received"></td>
+  </tr>
+</table>
+
+### Also on the tablets
+
+<table>
+  <tr>
+    <td width="50%"><b>Item availability.</b> Chicken staff switch items off when they sell out, so the cafe can't order them.<br><br><img src="docs/screenshots/17-chicken-availability.png" alt="Item availability"></td>
+    <td width="50%"><b>Report a problem.</b> About an order (missing or wrong items, payment) or general (running late, GCash down), with text or a voice clip.<br><br><img src="docs/screenshots/18-chicken-report.png" alt="Report a problem"></td>
+  </tr>
+</table>
+
+**Offline.** When the Wi-Fi drops, the tablet says so and keeps working. Changes are saved on the tablet and sent when the connection returns.
+
+<img src="docs/screenshots/19-cafe-offline.png" alt="Offline banner" width="100%">
 
 ### Owner dashboard
 
-1. **Overview:** sales by day, busy hours, how customers paid, and problems by day for a chosen date range.
-2. **Orders:** every order with its status, and a detail view with the full step-by-step history.
-3. **Settings:** the menu and prices, the alert timers for late orders, and the tablets themselves, including PINs and remote logout.
+**Overview.** Gross sales, orders, average order and late orders for a date range, plus both stores side by side, how customers paid, busy hours, sales by day, problems by day, and the items most often unavailable.
+
+<img src="docs/screenshots/owner-overview.png" alt="Owner overview" width="100%">
+
+<table>
+  <tr>
+    <td width="50%"><b>Orders</b>, searchable and filterable by date, status and payment<br><br><img src="docs/screenshots/owner-orders.png" alt="Transaction history"></td>
+    <td width="50%"><b>Order detail</b>, with the payment and every step, by which tablet and when<br><br><img src="docs/screenshots/owner-order-detail.png" alt="Order detail"></td>
+  </tr>
+  <tr>
+    <td width="50%"><b>Menu</b>: items, prices, flavours, add-ons and options<br><br><img src="docs/screenshots/owner-menu.png" alt="Menu settings"></td>
+    <td width="50%"><b>Alert timers</b> for when an order counts as late at each step<br><br><img src="docs/screenshots/owner-alert-timers.png" alt="Alert timers"></td>
+  </tr>
+  <tr>
+    <td width="50%"><b>Devices</b>: tablet PINs, signed-in tablets and remote logout<br><br><img src="docs/screenshots/owner-devices.png" alt="Devices"></td>
+    <td width="50%"><b>Sign-in</b> for the owner<br><br><img src="docs/screenshots/owner-sign-in.png" alt="Owner sign-in"></td>
+  </tr>
+</table>
 
 ## Cluck & Cup Team
 
