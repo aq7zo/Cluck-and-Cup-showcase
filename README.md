@@ -13,7 +13,7 @@
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres%20%2B%20RLS-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
-[The problem](#the-problem) · [Our solution](#our-solution) · [Results](#results) · [Tech stack](#tech-stack) · [How it works](#how-it-works) · [Team](#cluck--cup-team)
+[The problem](#the-problem) · [Our solution](#our-solution) · [Results](#results) · [Screenshots](#screenshots) · [Tech stack](#tech-stack) · [Team](#cluck--cup-team)
 
 </div>
 
@@ -56,41 +56,7 @@ Cluck & Cup runs on the Android tablets both stores already have and connects th
 
 The late alerts come from the server, so they reach both tablets even while the POS app is in the foreground. The database enforces every order rule through seven allowed transitions and one shared transition function, so no tablet can skip payment or write to orders directly.
 
-## Tech stack
-
-| Part | Stack |
-| :--- | :--- |
-| Staff app | Expo SDK 58 (React Native 0.88), Expo Router, TanStack Query with a persisted offline queue, expo-notifications |
-| Owner dashboard | Vite and React, served as a web app |
-| Backend | Supabase: Postgres, row-level security, RPCs, Realtime, pg_cron, pg_net, and a Deno Edge Function for push |
-| Shared code | `@cluck/shared`: pure TypeScript for money, orders, payments and status labels |
-| Tests and CI | Vitest (unit) and pgTAP (database), both run in GitHub Actions |
-
-**Staff app.** A single Expo app serves both tablets. After sign-in it opens either the cafe or the chicken screens (separate Expo Router route groups), locked to landscape for 8-inch tablets. TanStack Query keeps a persisted queue of every write, which is how the app keeps working through Wi-Fi drops. Order alerts arrive as push notifications on a high-priority channel with their own sound.
-
-**Backend.** The tablets never write to tables. Every change goes through a Postgres function (an RPC) that checks the role, the current status and the allowed next status, then writes the order and an event log row in one transaction. Row-level security limits what each store and the owner can read. `pg_cron` checks for late orders every minute, and `pg_net` calls the push Edge Function, which sends notifications through Expo's push service.
-
-**Owner dashboard.** A small React app on the same Supabase project. It reads order data through views and changes settings through the same RPC layer as the tablets.
-
-**Shared package.** Money, order and status rules live in one framework-free TypeScript package that the app, the dashboard and the tests all import, so a rule is written once.
-
-```mermaid
-flowchart LR
-    Cafe["Cafe tablet<br/>(Expo app)"] -- "request, pay, receive" --> RPC
-    Chicken["Chicken tablet<br/>(Expo app)"] -- "accept, cook, send out,<br/>menu on/off" --> RPC
-    Owner["Owner dashboard<br/>(Vite + React)"] -- "menu, timers, PINs" --> RPC
-    subgraph Supabase
-        RPC["RPCs + RLS"] --> DB[("Postgres<br/>orders + event log")]
-        Cron["pg_cron<br/>late check"] --> DB
-        DB -- "pg_net" --> Push["Edge Function<br/>push"]
-    end
-    DB -- "Realtime" --> Cafe
-    DB -- "Realtime" --> Chicken
-    Push -- "Expo push" --> Cafe
-    Push -- "Expo push" --> Chicken
-```
-
-## How it works
+## Screenshots
 
 The tablet screenshots follow one order, **#001**, through both stores on a local build running on two tablet emulators. It went from request to received in two minutes. The dashboard figures come from 60 days of generated demo orders.
 
@@ -208,6 +174,40 @@ On the cafe tablet, the runner leaving sends an *on the way* alert, and marking 
     <td width="50%"><b>Sign-in</b> for the owner<br><br><img src="docs/screenshots/owner-sign-in.png" alt="Owner sign-in"></td>
   </tr>
 </table>
+
+## Tech stack
+
+| Part | Stack |
+| :--- | :--- |
+| Staff app | Expo SDK 58 (React Native 0.88), Expo Router, TanStack Query with a persisted offline queue, expo-notifications |
+| Owner dashboard | Vite and React, served as a web app |
+| Backend | Supabase: Postgres, row-level security, RPCs, Realtime, pg_cron, pg_net, and a Deno Edge Function for push |
+| Shared code | `@cluck/shared`: pure TypeScript for money, orders, payments and status labels |
+| Tests and CI | Vitest (unit) and pgTAP (database), both run in GitHub Actions |
+
+**Staff app.** A single Expo app serves both tablets. After sign-in it opens either the cafe or the chicken screens (separate Expo Router route groups), locked to landscape for 8-inch tablets. TanStack Query keeps a persisted queue of every write, which is how the app keeps working through Wi-Fi drops. Order alerts arrive as push notifications on a high-priority channel with their own sound.
+
+**Backend.** The tablets never write to tables. Every change goes through a Postgres function (an RPC) that checks the role, the current status and the allowed next status, then writes the order and an event log row in one transaction. Row-level security limits what each store and the owner can read. `pg_cron` checks for late orders every minute, and `pg_net` calls the push Edge Function, which sends notifications through Expo's push service.
+
+**Owner dashboard.** A small React app on the same Supabase project. It reads order data through views and changes settings through the same RPC layer as the tablets.
+
+**Shared package.** Money, order and status rules live in one framework-free TypeScript package that the app, the dashboard and the tests all import, so a rule is written once.
+
+```mermaid
+flowchart LR
+    Cafe["Cafe tablet<br/>(Expo app)"] -- "request, pay, receive" --> RPC
+    Chicken["Chicken tablet<br/>(Expo app)"] -- "accept, cook, send out,<br/>menu on/off" --> RPC
+    Owner["Owner dashboard<br/>(Vite + React)"] -- "menu, timers, PINs" --> RPC
+    subgraph Supabase
+        RPC["RPCs + RLS"] --> DB[("Postgres<br/>orders + event log")]
+        Cron["pg_cron<br/>late check"] --> DB
+        DB -- "pg_net" --> Push["Edge Function<br/>push"]
+    end
+    DB -- "Realtime" --> Cafe
+    DB -- "Realtime" --> Chicken
+    Push -- "Expo push" --> Cafe
+    Push -- "Expo push" --> Chicken
+```
 
 ## Cluck & Cup Team
 
