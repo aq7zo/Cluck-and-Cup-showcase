@@ -223,5 +223,5 @@ CSSWENG Group 1, De La Salle University, 2026.
 | Campo, Benette Enzo [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enzo-campo/) | Lead Developer |
 | Fortunato, Jayel James [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jayel-james-fortunato-a37063385/) | Developer |
 | Yee, Ivan Rae [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ivan-rae-yee-86abba308/) | Developer |
-| Cheung, Tsz Man | Quality Assurance |
+| Cheung, Tsz Man [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/%E6%A2%93%E6%B3%AF-%E5%BC%A0-6bb53644b/) | Quality Assurance |
 | Maglente, Michael Stephen [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://linkedin.com) | Quality Assurance |
