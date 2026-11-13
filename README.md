@@ -217,8 +217,6 @@ CSSWENG Group 1, De La Salle University, 2026.
 
 | Name | Role |
 | :--- | :--- |
-| Name | Role |
-| :--- | :--- |
 | Morgan, Jack Owen [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jack-owen-morgan-4134322b1/) | Project Manager |
 | Hallare, Zach Benedict [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zach-benedict-hallare/) | Business Analyst |
 | Tan, Neil Justine [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/neil-justine-tan-b03b6b397/) | Business Analyst |
