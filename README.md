@@ -15,7 +15,7 @@
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres%20%2B%20RLS-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
-[The problem](#the-problem) · [Our solution](#our-solution) · [The Results](#results) · [Screenshots](#screenshots) · [Tech stack](#tech-stack) · [Team](#cluck--cup-team)
+[The problem](#the-problem) · [Our solution](#our-solution) · [The Results](#the-results) · [Screenshots](#screenshots) · [Tech stack](#tech-stack) · [Team](#cluck--cup-team)
 
 </div>
 
