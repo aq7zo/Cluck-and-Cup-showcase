@@ -215,13 +215,15 @@ flowchart LR
 
 CSSWENG Group 1, De La Salle University, 2026.
 
-| Name | Role | LinkedIn |
-| :--- | :--- | :--- |
-| Morgan, Jack Owen | Project Manager | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jack-owen-morgan-4134322b1/) |
-| Hallare, Zach Benedict | Business Analyst | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zach-benedict-hallare/) |
-| Tan, Neil Justine | Business Analyst | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/neil-justine-tan-b03b6b397/) |
-| Campo, Benette Enzo | Lead Developer | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enzo-campo/) |
-| Fortunato, Jayel James | Developer | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jayel-james-fortunato-a37063385/) |
-| Yee, Ivan Rae | Developer | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ivan-rae-yee-86abba308/) |
-| Cheung, Tsz Man | Quality Assurance | — |
-| Maglente, Michael Stephen | Quality Assurance | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://linkedin.com) |
+| Name | Role |
+| :--- | :--- |
+| Name | Role |
+| :--- | :--- |
+| Morgan, Jack Owen [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jack-owen-morgan-4134322b1/) | Project Manager |
+| Hallare, Zach Benedict [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/zach-benedict-hallare/) | Business Analyst |
+| Tan, Neil Justine [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/neil-justine-tan-b03b6b397/) | Business Analyst |
+| Campo, Benette Enzo [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enzo-campo/) | Lead Developer |
+| Fortunato, Jayel James [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jayel-james-fortunato-a37063385/) | Developer |
+| Yee, Ivan Rae [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ivan-rae-yee-86abba308/) | Developer |
+| Cheung, Tsz Man | Quality Assurance |
+| Maglente, Michael Stephen [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://linkedin.com) | Quality Assurance |
