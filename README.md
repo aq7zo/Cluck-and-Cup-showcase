@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="docs/images/logo-butfirstcoffee.png" alt="But First, Coffee" height="110">
+<img src="docs/images/logo-But First, Coffee.png" alt="But First, Coffee" height="110">
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="docs/images/logo-cluck&cup.png" alt="Cluck & Cup" height="110">
+<img src="docs/images/logo-Cluck & Cup.png" alt="Cluck & Cup" height="110">
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="docs/images/logo-urbantstreat.png" alt="Urban StrEat" height="110">
+<img src="docs/images/logo-Urbant Streat.png" alt="Urban StrEat" height="110">
 
 # Cluck & Cup
 
@@ -15,7 +15,7 @@
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres%20%2B%20RLS-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
-[The problem](#the-problem) · [Our solution](#our-solution) · [The Results](#results) · [Screenshots](#screenshots) · [Tech stack](#tech-stack) · [Team](#cluck--cup-team)
+[The problem](#the-problem) · [Our solution](#our-solution) · [Results](#results) · [Screenshots](#screenshots) · [Tech stack](#tech-stack) · [Team](#cluck--cup-team)
 
 </div>
 
