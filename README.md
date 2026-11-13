@@ -2,7 +2,7 @@
 
 <img src="docs/images/logo-butfirstcoffee.png" alt="But First, Coffee" height="110">
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src="docs/images/logo-cluck&cup" alt="Cluck & Cup" height="110">
+<img src="docs/images/logo-cluck&cup.png" alt="Cluck & Cup" height="110">
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="docs/images/logo-urbantstreat.png" alt="Urban StrEat" height="110">
 
